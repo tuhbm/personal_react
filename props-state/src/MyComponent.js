@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class MyComponent extends Component {
+    constructor(props) {
+        super(props);
+    }
+    state= {
+        number: Math.round(Math.random() * 300) + 50
+    }
     static defaultProps = {
         name: 'name props default',
-        text: 'text props default'
+        text: 'text props default',
+        age: 6
     }
 
     static propTypes = {
@@ -23,6 +30,12 @@ class MyComponent extends Component {
                 <div>{ this.props.name } 사용하기</div>
                 <div>{ this.props.text } 추가</div>
                 <div>{ this.props.age }살 입니다.</div>
+                <div>숫자: { this.state.number }</div>
+                <button onClick={() => {
+                    this.setState({
+                        number: this.state.number-1
+                    })
+                }}>더하기</button>
             </div>
         )
     }

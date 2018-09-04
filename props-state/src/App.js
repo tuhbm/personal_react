@@ -12,7 +12,7 @@ class App extends Component {
         <br/>
         <br/>
         <br/>
-        <MyComponent name={1} text={2} />
+        <MyComponent name="props" text="props text" age={3} />
       </div>
     );
   }
