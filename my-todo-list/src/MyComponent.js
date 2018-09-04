@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 
-class myComponent extends Component {
+class MyComponent extends Component {
     render () {
         return (
             <div>
-                나의 새로운 컴포넌트!!!!!!!!!!!!
+                <div>My Component 불러오기</div>
+                <div>{ this.props.name } 사용하기</div>
+                <div>{ this.props.text } 추가</div>
             </div>
         )
     }
 }
 
-export default myComponent;
+MyComponent.defaultProps = {
+    name: 'name',
+    text: 'text'
+}
+
+export default MyComponent;
