@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import MyComponent from '../../my-todo-list/src/MyComponent';
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
           <input type="text" placeholder="아이디" /><br/>
           <input type="password" placeholder="비밀번호" /><br/>
         </form>
+        <br/>
         {/* 주석은 요로코롬 */}
         //주석을 이렇게 달면 걍 노출된다.
         <br/>
