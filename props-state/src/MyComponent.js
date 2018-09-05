@@ -7,18 +7,18 @@ class MyComponent extends Component {
     }
     state= {
         number: Math.round(Math.random() * 300) + 50
-    }
+    };
     static defaultProps = {
         name: 'name props default',
         text: 'text props default',
         age: 6
-    }
+    };
 
     static propTypes = {
         name: PropTypes.string,
         text: PropTypes.string,
         age: PropTypes.number.isRequired
-    }
+    };
 
     render () {
         return (
@@ -35,7 +35,12 @@ class MyComponent extends Component {
                     this.setState({
                         number: this.state.number-1
                     })
-                }}>더하기</button>
+                }}>클릭</button>
+                <button onMouseEnter={() => {
+                    this.setState({
+                        number: this.state.number-1
+                    })
+                }}>HOVER</button>
             </div>
         )
     }
