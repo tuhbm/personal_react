@@ -74,5 +74,4 @@ class LifeCycleSample extends Component {
     );
   }
 }
-
 export default LifeCycleSample;
