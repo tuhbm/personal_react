@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class LifeCycleSample extends Component {
   state = {
-    number: 0,
+    number: null,
     color: null
   };
   
@@ -56,12 +56,6 @@ class LifeCycleSample extends Component {
     console.log('componentWillUnmount');
   }
   
-  handleClick = () => {
-    this.setState({
-        number: this.state.number + 1
-    });
-  };
-  
   getSnapshotBeforeUpdate(prevProps, prevState) {
     /**
      * render메서드 호출 후 DOM의 변화를 반영하기 바로 직전 호출
@@ -87,24 +81,20 @@ class LifeCycleSample extends Component {
       console.log('업데이트 되기 직전 색상: ', snapshot);
     }
   }
-  
-  
+
   render() {
     console.log('render');
 
     const style = {
-      color:this.props.color
+      color: this.props.color
     };
 
     return (
       <div>
         <h1 style={style} ref={ref => this.myRef = ref}>
-          {this.state.number}
+          {this.props.number}
         </h1>
-        <p>color: {this.state.color}</p>
-        <button onClick={this.handleClick}>
-          더하기
-        </button>
+        <p>color: {this.props.color}</p>
       </div>
     );
   }
