@@ -24,6 +24,7 @@ class LifeCycleSample extends Component {
      * props로 받아온 값을 state에 동기화시키는 용도로 사용
      * 컴포넌트는 마운트하거나 props를 변경할때 호출
      */
+    console.log('getDerivedStateFromProps');
     if(nextProps.color !== prevState.color) {
       return {color: nextProps.color};
     }
