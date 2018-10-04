@@ -1,25 +1,4 @@
-@import '~open-color/open-color';
-@import '~include-media/dist/include-media';
-
-$breakpoints: (
-  smail: 376px,
-  medium: 768px,
-  large: 1024px,
-  huge: 1200px
-);
-
-$size: 100px;
-
-@mixin line-border($thickness, $sort, $color) {
-  border: $thickness $sort $color;
-}
-
-@mixin place-at-center($topPosition, $leftPosition, $topTranslate, $leftTranslate) {
-  top: $topPosition;
-  left: $leftPosition;
-  transform: translate($topTranslate, $leftTranslate);
-}
-
+@import '../../styles/utils';
 
 .button {
   background: $oc-green-7;

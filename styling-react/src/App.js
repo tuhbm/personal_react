@@ -1,33 +1,31 @@
 import React, { Component } from 'react';
-import classNames from 'classnames';
-// import styles from './App.css';
-import styles from './App.scss';
+import Button from './components/Button';
 
-console.log(styles);
 
-const cx = classNames.bind(styles);
+// const cx = classNames.bind(styles);
 
 class App extends Component {
   render() {
-    const isBlue = true;
+    // const isBlue = true;
     return (
       <div>
-          <div className={cx('box', {blue: isBlue})}>
-              <div class="box-inner">
-                  <div className={cx('box-inside')}>
-                  </div>
-              </div>
-          </div>
-          <div className={cx(['foo', 'green'])}>
-          </div>
-          <div className={cx({poo: true}, {red: true})}>
-          </div>
-          <div className={cx({'moo': true}, {'pink': false})}>
-          </div>
-          <div className={cx({'boo': true, 'orange': true})}>
-          </div>
-          <div className={cx(null, 0, undefined, false, 'eoo', '', {'number': null})}>
-          </div>
+          <Button className={'button'}>버튼</Button>
+          {/*<div className={cx('box', {blue: isBlue})}>*/}
+              {/*<div class="box-inner">*/}
+                  {/*<div className={cx('box-inside')}>*/}
+                  {/*</div>*/}
+              {/*</div>*/}
+          {/*</div>*/}
+          {/*<div className={cx(['foo', 'green'])}>*/}
+          {/*</div>*/}
+          {/*<div className={cx({poo: true}, {red: true})}>*/}
+          {/*</div>*/}
+          {/*<div className={cx({'moo': true}, {'pink': false})}>*/}
+          {/*</div>*/}
+          {/*<div className={cx({'boo': true, 'orange': true})}>*/}
+          {/*</div>*/}
+          {/*<div className={cx(null, 0, undefined, false, 'eoo', '', {'number': null})}>*/}
+          {/*</div>*/}
       </div>
       
     );

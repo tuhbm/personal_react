@@ -5,3 +5,11 @@
 classnames@^2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+
+include-media@^1.4.9:
+  version "1.4.9"
+  resolved "https://registry.yarnpkg.com/include-media/-/include-media-1.4.9.tgz#d0020b7be3eb2d54868a20943595ce380e0bc43b"
+
+open-color@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/open-color/-/open-color-1.6.3.tgz#ff0d62983bcdda8048b776daedda2237e8a322ed"
