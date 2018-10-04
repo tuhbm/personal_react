@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import styles from './App.css';
+// import styles from './App.css';
+import styles from './App.scss';
 
 console.log(styles);
 
@@ -12,6 +13,10 @@ class App extends Component {
     return (
       <div>
           <div className={cx('box', {blue: isBlue})}>
+              <div class="box-inner">
+                  <div className={cx('box-inside')}>
+                  </div>
+              </div>
           </div>
           <div className={cx(['foo', 'green'])}>
           </div>

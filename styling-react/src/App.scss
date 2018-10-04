@@ -1,0 +1,40 @@
+@import './styles/utils';
+
+.box {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  @include line-border(1px, solid, #000);
+  position: fixed;
+  @include place-at-center(50%, 50%, -50%, -50%);
+
+  &.blue {
+    background: blue;
+  }
+
+  &.pink {
+    background: deeppink
+  }
+
+  &:hover {
+    background: red;
+  }
+
+  &:active {
+    background: yellow;
+  }
+
+  .box-inner{
+    position: relative;
+    width: $size;
+    height: $size;
+  }
+
+  .box-inside{
+    width: $size/2;
+    height: $size/2;
+    background: purple;
+    @include place-at-center(50%, 50%, 50%, 50%);
+    @include line-border(2px, dotted, red);
+  }
+}

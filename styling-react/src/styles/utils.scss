@@ -1,0 +1,11 @@
+$size: 100px;
+
+@mixin line-border($thickness, $sort, $color) {
+  border: $thickness $sort $color;
+}
+
+@mixin place-at-center($topPosition, $leftPosition, $topTranslate, $leftTranslate) {
+  top: $topPosition;
+  left: $leftPosition;
+  transform: translate($topTranslate, $leftTranslate);
+}
