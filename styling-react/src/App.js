@@ -1,14 +1,30 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import styles from './App.css';
 
 console.log(styles);
 
+const cx = classNames.bind(styles);
+
 class App extends Component {
   render() {
+    const isBlue = true;
     return (
-      <div className={styles.box}>
-      
+      <div>
+          <div className={cx('box', {blue: isBlue})}>
+          </div>
+          <div className={cx(['foo', 'green'])}>
+          </div>
+          <div className={cx({poo: true}, {red: true})}>
+          </div>
+          <div className={cx({'moo': true}, {'pink': false})}>
+          </div>
+          <div className={cx({'boo': true, 'orange': true})}>
+          </div>
+          <div className={cx(null, 0, undefined, false, 'eoo', '', {'number': null})}>
+          </div>
       </div>
+      
     );
   }
 }
